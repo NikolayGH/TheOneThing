@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWelcomeBackground"
+    tools:context="ru.prog_edu.thronethingshablon.LoginActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/et_login_enter_mail"
+            android:layout_width="296dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/enter_e_mail"
+            android:inputType="textEmailAddress"
+            android:maxLength="30"
+            android:textColor="@color/main_textColor"
+            android:textColorHint="@color/main_textColorHint"
+            android:textSize="32sp"
+            android:nextFocusForward="@+id/et_login_enter_pass"
+            android:nextFocusUp="@+id/btn_register"
+            android:nextFocusDown="@+id/et_login_enter_pass"
+            app:layout_constraintBottom_toTopOf="@+id/et_login_enter_pass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/et_login_enter_pass"
+            android:layout_width="296dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/your_pass_hint"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            android:textColor="@color/main_textColor"
+            android:textColorHint="@color/main_textColorHint"
+            android:textSize="32sp"
+            android:nextFocusForward="@+id/btn_login"
+            android:nextFocusUp="@+id/et_login_enter_mail"
+            android:nextFocusDown="@+id/btn_login"
+            app:layout_constraintBottom_toTopOf="@+id/btn_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_login_enter_mail" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/button_style"
+            android:text="@string/login_text_button"
+            android:textColor="@color/main_textColor"
+            android:nextFocusForward="@+id/btn_register"
+            android:nextFocusUp="@+id/et_login_enter_pass"
+            android:nextFocusDown="@+id/btn_register"
+            android:contentDescription="@string/login_button"
+            app:layout_constraintBottom_toTopOf="@+id/btn_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_login_enter_pass" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/button_style"
+            android:text="@string/registration_button"
+            android:nextFocusForward="@+id/et_login_enter_mail"
+            android:nextFocusUp="@+id/btn_login"
+            android:nextFocusDown="@+id/et_login_enter_mail"
+            android:textColor="@color/main_textColor"
+            android:contentDescription="@string/registration_c_d"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

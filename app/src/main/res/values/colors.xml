@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffd93e</color>
+    <color name="colorPrimaryDark">#facb09</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWelcomeBackground">#eeeded</color>
+    <color name="main_textColor">#575656</color>
+    <color name="main_textColorHint">#76575656</color>
+    <color name="color_selected_button_on_tab_view">#ffd93e</color>
+    <color name="color_for_ic_menu">#e4e4e4</color>
+    <color name="green_tone_button">#0cd72b</color>
+</resources>

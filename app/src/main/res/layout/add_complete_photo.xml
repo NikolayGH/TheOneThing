@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWelcomeBackground"
+    tools:context="ru.prog_edu.thronethingshablon.TaskComliteActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_date_edit_in_compl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/_18_07_18"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:nextFocusForward="@+id/btn_add_task_in_complitted"
+            android:nextFocusUp="@+id/btn_add_photo"
+            android:nextFocusLeft="@+id/btn_add_photo"
+            android:nextFocusRight="@+id/btn_add_task_in_complitted"
+            android:contentDescription="@string/date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <EditText
+            android:id="@+id/et_title_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/title_your_tsk"
+            android:nextFocusForward="@+id/et_description_task"
+            android:nextFocusUp="@+id/btn_add_photo"
+            android:nextFocusDown="@+id/et_description_task"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/et_description_task"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:singleLine="false"
+            android:hint="@string/description_of_task"
+            android:textStyle="bold"
+            android:nextFocusForward="@+id/btn_done_in_compl"
+            android:nextFocusUp="@+id/et_title_task"
+            android:nextFocusDown="@+id/btn_done_in_compl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_title_task"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btn_done_in_compl"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:nextFocusForward="@+id/seekBar"
+            android:nextFocusUp="@+id/et_description_task"
+            android:nextFocusDown="@+id/btn_face_frown_in_compl"
+            android:nextFocusLeft="@+id/seekBar"
+            android:nextFocusRight="@+id/seekBar"
+            android:background="@drawable/circular_check_box_button_selector"
+            android:contentDescription="@string/done_or_undone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_description_task" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="229dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:src = "@drawable/picture"
+            android:contentDescription="@string/photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_face_meh_in_compl" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="8dp"
+            android:max="100"
+            android:nextFocusForward="@+id/btn_face_frown_in_compl"
+            android:nextFocusUp="@+id/et_description_task"
+            android:nextFocusDown="@+id/btn_face_frown_in_compl"
+            android:nextFocusLeft="@+id/btn_done_in_compl"
+            android:nextFocusRight="@+id/btn_done_in_compl"
+            android:contentDescription="@string/completeness"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_done_in_compl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_done_in_compl"
+            app:layout_constraintTop_toTopOf="@+id/btn_done_in_compl"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/btn_face_meh_in_compl"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/circular_face_meh_button_selector"
+            android:nextFocusForward="@+id/btn_face_smile_in_compl"
+            android:nextFocusUp="@+id/seekBar"
+            android:nextFocusDown="@+id/btn_add_photo"
+            android:nextFocusLeft="@+id/btn_face_frown_in_compl"
+            android:nextFocusRight="@+id/btn_face_smile_in_compl"
+            android:contentDescription="@string/set_emotion_meh"
+            app:layout_constraintEnd_toStartOf="@+id/btn_face_smile_in_compl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_face_frown_in_compl"
+            app:layout_constraintTop_toBottomOf="@+id/btn_done_in_compl" />
+
+        <Button
+            android:id="@+id/btn_face_smile_in_compl"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/circular_face_smile_box_button_selector"
+            android:nextFocusForward="@+id/btn_add_photo"
+            android:nextFocusUp="@+id/seekBar"
+            android:nextFocusDown="@+id/btn_add_photo"
+            android:nextFocusLeft="@+id/btn_face_meh_in_compl"
+            android:nextFocusRight="@+id/btn_face_frown_in_compl"
+            android:contentDescription="@string/set_emotion_smile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_face_meh_in_compl"
+            app:layout_constraintTop_toBottomOf="@+id/btn_done_in_compl" />
+
+        <Button
+            android:id="@+id/btn_face_frown_in_compl"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/circular_face_frown_button_selector"
+            android:nextFocusForward="@+id/btn_face_meh_in_compl"
+            android:nextFocusUp="@+id/seekBar"
+            android:nextFocusDown="@+id/btn_add_photo"
+            android:nextFocusLeft="@+id/btn_face_meh_in_compl"
+            android:nextFocusRight="@+id/btn_face_frown_in_compl"
+            android:contentDescription="@string/set_emotion_frown"
+            app:layout_constraintEnd_toStartOf="@+id/btn_face_meh_in_compl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_done_in_compl" />
+
+        <Button
+            android:id="@+id/btn_add_photo"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/button_add_photo"
+            android:nextFocusForward="@+id/tv_date_edit_in_compl"
+            android:nextFocusUp="@+id/btn_face_smile_in_compl"
+            android:nextFocusDown="@+id/tv_date_edit_in_compl"
+            android:nextFocusLeft="@+id/tv_date_edit_in_compl"
+            android:contentDescription="@string/add_photo_by_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/percent_of_completeness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/_0"
+            android:contentDescription="@string/percent_of_completeness"
+            app:layout_constraintEnd_toEndOf="@+id/seekBar"
+            app:layout_constraintHorizontal_bias="0.56"
+            app:layout_constraintStart_toStartOf="@+id/seekBar"
+            app:layout_constraintTop_toBottomOf="@+id/et_description_task" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_add_task_in_complitted"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_done"
+            android:nextFocusForward="@+id/et_title_task"
+            android:nextFocusUp="@+id/tv_date_edit_in_compl"
+            android:nextFocusDown="@+id/et_title_task"
+            android:contentDescription="@string/save_changes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

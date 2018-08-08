@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "658119956184",
+    "firebase_url": "https://theonething-4d52b.firebaseio.com",
+    "project_id": "theonething-4d52b",
+    "storage_bucket": "theonething-4d52b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658119956184:android:50bf18275a725f25",
+        "android_client_info": {
+          "package_name": "ru.prog_edu.thronethingshablon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658119956184-uaqturng1h3refkpt8p4r5k0p5fun4pf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.prog_edu.thronethingshablon",
+            "certificate_hash": "6e571b82b2603d5e698fa7e2f36867dbc0bdad1e"
+          }
+        },
+        {
+          "client_id": "658119956184-ehsq562e5sautnjfhaq22lnre2aoo3cp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsUDyMILMiTrylNUKVrrExQN9yy1HE5Hs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658119956184-ehsq562e5sautnjfhaq22lnre2aoo3cp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

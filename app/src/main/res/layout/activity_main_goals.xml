@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWelcomeBackground"
+    tools:context="ru.prog_edu.thronethingshablon.MainGoalsActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_layout"
+        android:layout_width="446dp"
+        android:layout_height="638dp"
+        android:background="@color/color_selected_button_on_tab_view" />
+
+    <TextView
+        android:id="@+id/main_title_goals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/your_one_thing"
+        android:contentDescription="@string/your_one_thing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginVertical="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_title_goals"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:background="@color/color_for_ic_menu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <TextView
+                    android:id="@+id/tv_year_task_title"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/one_thing_for_current_year"
+                    android:lines="5"
+                    android:text="@string/your_one_thing_for_current_year"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_time_year"
+                    tools:text="Yor one thing for current Year" />
+
+                <TextView
+                    android:id="@+id/tv_time_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/time_period"
+                    android:text="@string/year"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="YEAR" />
+
+                <Button
+                    android:id="@+id/btn_year_edit"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_edit_button_selector"
+                    android:contentDescription="@string/edit_year_task"
+                    android:nextFocusDown="@+id/btn_month_edit"
+                    android:nextFocusForward="@+id/btn_month_done_undone"
+                    android:nextFocusLeft="@+id/btn_year_add"
+                    android:nextFocusRight="@+id/btn_year_done_undone"
+                    android:nextFocusUp="@+id/btn_day_edit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btn_year_add"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_year_task_title" />
+
+                <Button
+                    android:id="@+id/btn_year_add"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_add_button_selector"
+                    android:contentDescription="@string/add_year_task"
+                    android:nextFocusDown="@+id/btn_month_add"
+                    android:nextFocusForward="@+id/btn_year_edit"
+                    android:nextFocusLeft="@+id/btn_year_clear"
+                    android:nextFocusRight="@+id/btn_year_edit"
+                    android:nextFocusUp="@+id/btn_day_add"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_year_edit"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btn_year_clear"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_year_task_title" />
+
+                <Button
+                    android:id="@+id/btn_year_done_undone"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_check_box_button_selector"
+                    android:contentDescription="@string/done_or_undone_year_task"
+                    android:nextFocusDown="@+id/btn_month_done_undone"
+                    android:nextFocusForward="@+id/btn_year_clear"
+                    android:nextFocusLeft="@+id/btn_year_edit"
+                    android:nextFocusRight="@+id/btn_year_clear"
+                    android:nextFocusUp="@+id/btn_day_done_undone"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_year_clear"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_year_task_title" />
+
+                <Button
+                    android:id="@+id/btn_year_clear"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_delete_button_selector"
+                    android:contentDescription="@string/delete_year_task"
+                    android:nextFocusDown="@+id/btn_month_clear"
+                    android:nextFocusForward="@+id/btn_year_add"
+                    android:nextFocusLeft="@+id/btn_year_done_undone"
+                    android:nextFocusRight="@+id/btn_year_add"
+                    android:nextFocusUp="@+id/btn_day_clear"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_year_add"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btn_year_done_undone"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_year_task_title" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/color_for_ic_menu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+
+                <TextView
+                    android:id="@+id/tv_month_task_title"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/month_task_title"
+                    android:lines="5"
+                    android:text="@string/yor_one_thing_for_current_month"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_time_month"
+                    tools:text="Yor one thing for current month" />
+
+                <TextView
+                    android:id="@+id/tv_time_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/month_time_period"
+                    android:text="@string/month"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="MONTH" />
+
+                <Button
+                    android:id="@+id/btn_month_edit"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_edit_button_selector"
+                    android:contentDescription="@string/edit_month_task"
+                    android:nextFocusDown="@+id/btn_week_edit"
+                    android:nextFocusForward="@+id/btn_week_done_undone"
+                    android:nextFocusLeft="@+id/btn_month_add"
+                    android:nextFocusRight="@+id/btn_month_done_undone"
+                    android:nextFocusUp="@+id/btn_year_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btn_month_add"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_month_task_title" />
+
+                <Button
+                    android:id="@+id/btn_month_add"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_add_button_selector"
+                    android:contentDescription="@string/add_month_task"
+                    android:nextFocusDown="@+id/btn_week_add"
+                    android:nextFocusForward="@+id/btn_month_edit"
+                    android:nextFocusLeft="@+id/btn_month_clear"
+                    android:nextFocusRight="@+id/btn_month_edit"
+                    android:nextFocusUp="@+id/btn_year_add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_month_edit"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btn_month_clear"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_month_task_title" />
+
+                <Button
+                    android:id="@+id/btn_month_done_undone"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_check_box_button_selector"
+                    android:contentDescription="@string/done_or_undone_month_task"
+                    android:nextFocusDown="@+id/btn_week_done_undone"
+                    android:nextFocusForward="@+id/btn_month_clear"
+                    android:nextFocusLeft="@+id/btn_month_edit"
+                    android:nextFocusRight="@+id/btn_month_clear"
+                    android:nextFocusUp="@+id/btn_year_done_undone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_month_clear"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_month_task_title" />
+
+                <Button
+                    android:id="@+id/btn_month_clear"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_delete_button_selector"
+                    android:contentDescription="@string/delete_month_task"
+                    android:nextFocusDown="@+id/btn_week_clear"
+                    android:nextFocusForward="@+id/btn_month_add"
+                    android:nextFocusLeft="@+id/btn_month_done_undone"
+                    android:nextFocusRight="@+id/btn_month_add"
+                    android:nextFocusUp="@+id/btn_year_add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_month_add"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btn_month_done_undone"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_month_task_title" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/constraintLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/color_for_ic_menu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+
+                <TextView
+                    android:id="@+id/tv_week_task_title"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/title_week_task"
+                    android:lines="5"
+                    android:text="@string/yor_one_thing_for_current_week"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_time_week"
+                    tools:text="Yor one thing for current week" />
+
+                <TextView
+                    android:id="@+id/tv_time_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/week_time_period"
+                    android:text="@string/week"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="WEEK" />
+
+                <Button
+                    android:id="@+id/btn_week_edit"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_edit_button_selector"
+                    android:contentDescription="@string/edit_week_task"
+                    android:nextFocusDown="@+id/btn_day_edit"
+                    android:nextFocusForward="@+id/btn_day_done_undone"
+                    android:nextFocusLeft="@+id/btn_week_add"
+                    android:nextFocusRight="@+id/btn_week_done_undone"
+                    android:nextFocusUp="@+id/btn_month_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btn_week_add"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_week_task_title" />
+
+                <Button
+                    android:id="@+id/btn_week_add"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_add_button_selector"
+                    android:contentDescription="@string/add_week_task"
+                    android:nextFocusDown="@+id/btn_day_add"
+                    android:nextFocusForward="@+id/btn_week_edit"
+                    android:nextFocusLeft="@+id/btn_week_clear"
+                    android:nextFocusRight="@+id/btn_week_edit"
+                    android:nextFocusUp="@+id/btn_month_add"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_week_edit"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btn_week_clear"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_week_task_title" />
+
+                <Button
+                    android:id="@+id/btn_week_clear"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_delete_button_selector"
+                    android:contentDescription="@string/delete_week_task"
+                    android:nextFocusDown="@+id/btn_day_clear"
+                    android:nextFocusForward="@+id/btn_week_add"
+                    android:nextFocusLeft="@+id/btn_week_done_undone"
+                    android:nextFocusRight="@+id/btn_week_add"
+                    android:nextFocusUp="@+id/btn_month_clear"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_week_add"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btn_week_done_undone"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_week_task_title" />
+
+                <Button
+                    android:id="@+id/btn_week_done_undone"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_check_box_button_selector"
+                    android:contentDescription="@string/done_or_undone_week_task"
+                    android:nextFocusDown="@+id/btn_day_done_undone"
+                    android:nextFocusForward="@+id/btn_week_clear"
+                    android:nextFocusLeft="@+id/btn_week_edit"
+                    android:nextFocusRight="@+id/btn_week_clear"
+                    android:nextFocusUp="@+id/btn_month_done_undone"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_week_clear"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_week_task_title" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/color_for_ic_menu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+
+                <TextView
+                    android:id="@+id/tv_day_task_title"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/day_task_title"
+                    android:lines="5"
+                    android:text="@string/yor_one_thing_for_current_day"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_time_day"
+                    tools:text="Yor one thing for current day" />
+
+                <TextView
+                    android:id="@+id/tv_time_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/day_time_period"
+                    android:text="@string/day"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="DAY" />
+
+                <Button
+                    android:id="@+id/btn_day_edit"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_edit_button_selector"
+                    android:contentDescription="@string/edit_day_task"
+                    android:nextFocusDown="@+id/btn_year_edit"
+                    android:nextFocusForward="@+id/btn_year_done_undone"
+                    android:nextFocusLeft="@+id/btn_day_add"
+                    android:nextFocusRight="@+id/btn_day_done_undone"
+                    android:nextFocusUp="@+id/btn_week_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btn_day_add"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_day_task_title" />
+
+                <Button
+                    android:id="@+id/btn_day_add"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_add_button_selector"
+                    android:contentDescription="@string/add_day_task"
+                    android:nextFocusDown="@+id/btn_year_add"
+                    android:nextFocusForward="@+id/btn_day_edit"
+                    android:nextFocusLeft="@+id/btn_day_clear"
+                    android:nextFocusRight="@+id/btn_day_edit"
+                    android:nextFocusUp="@+id/btn_week_add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_day_edit"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btn_day_clear"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_day_task_title" />
+
+                <Button
+                    android:id="@+id/btn_day_clear"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_delete_button_selector"
+                    android:contentDescription="@string/delete_day_task"
+                    android:nextFocusDown="@+id/btn_year_clear"
+                    android:nextFocusForward="@+id/btn_day_add"
+                    android:nextFocusLeft="@+id/btn_day_done_undone"
+                    android:nextFocusRight="@+id/btn_day_add"
+                    android:nextFocusUp="@+id/btn_week_clear"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_day_add"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btn_day_done_undone"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_day_task_title" />
+
+                <Button
+                    android:id="@+id/btn_day_done_undone"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/circular_check_box_button_selector"
+                    android:contentDescription="@string/done_or_undone_day_task"
+                    android:nextFocusDown="@+id/btn_year_done_undone"
+                    android:nextFocusForward="@+id/btn_day_clear"
+                    android:nextFocusLeft="@+id/btn_day_edit"
+                    android:nextFocusRight="@+id/btn_day_clear"
+                    android:nextFocusUp="@+id/btn_week_clear"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_day_clear"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_day_task_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_day_task_title" />
+
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

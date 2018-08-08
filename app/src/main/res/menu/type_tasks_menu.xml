@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/year"
+        android:icon="@drawable/ic_event_available_black_24dp"
+        android:title="@string/year"
+        android:contentDescription="@string/year"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/month"
+        android:icon="@drawable/ic_month"
+        android:title="@string/month"
+        android:contentDescription="@string/month"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/week"
+        android:icon="@drawable/ic_week"
+        android:title="@string/week"
+        android:contentDescription="@string/week"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/day"
+        android:icon="@drawable/ic_day"
+        android:title="@string/day"
+        android:contentDescription="@string/day"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/firebase_download"
+        android:title="@string/download_from_fb" />
+
+    <item android:id="@+id/firebase_upload"
+        android:title="@string/upload_to_fb" />
+
+    <item android:id="@+id/start_job"
+        android:title="@string/start_job" />
+
+    <item android:id="@+id/stop_job"
+        android:title="@string/stop_job" />
+
+</menu>
