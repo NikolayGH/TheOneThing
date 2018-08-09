@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                     createAccount(mEmailField.getText().toString(), mPasswordField.getText().toString());
 
                 }else{
-                    Toast.makeText(LoginActivity.this, "No Internet connection", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, R.string.no_internet_connection, Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
                     signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());
 
                 }else{
-                    Toast.makeText(LoginActivity.this, "No Internet connection", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, R.string.no_internet_connection, Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -110,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            Toast.makeText(LoginActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }
@@ -145,7 +145,7 @@ public class LoginActivity extends AppCompatActivity {
                             }
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            Toast.makeText(LoginActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }

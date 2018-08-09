@@ -115,7 +115,6 @@ public class MainGoalsActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 doneButtonYear.setSelected(!doneButtonYear.isSelected());
-                //create method to replace repeated code
                 if(yearTask!=null){
                     if(doneButtonYear.isSelected()){
                         yearTask.setTaskIsDone(1);
@@ -124,7 +123,7 @@ public class MainGoalsActivity extends AppCompatActivity{
                     }
                     myDb.taskDao().updateTask(yearTask);
                 }else{
-                    Toast.makeText(MainGoalsActivity.this, "YOU HAVE NO ACTIVE TASKS!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainGoalsActivity.this, R.string.no_active_tasksk, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -141,7 +140,7 @@ public class MainGoalsActivity extends AppCompatActivity{
                     }
                     myDb.taskDao().updateTask(monthTask);
                 }else{
-                    Toast.makeText(MainGoalsActivity.this, "YOU HAVE NO ACTIVE TASKS!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainGoalsActivity.this, R.string.no_active_tasksk, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -158,7 +157,7 @@ public class MainGoalsActivity extends AppCompatActivity{
                     }
                     myDb.taskDao().updateTask(weekTask);
                 }else{
-                    Toast.makeText(MainGoalsActivity.this, "YOU HAVE NO ACTIVE TASKS!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainGoalsActivity.this, R.string.no_active_tasksk, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -176,7 +175,7 @@ public class MainGoalsActivity extends AppCompatActivity{
                     }
                     myDb.taskDao().updateTask(dayTask);
                 }else{
-                    Toast.makeText(MainGoalsActivity.this, "YOU HAVE NO ACTIVE TASKS!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainGoalsActivity.this, R.string.no_active_tasksk, Toast.LENGTH_SHORT).show();
                 }
             }
         });

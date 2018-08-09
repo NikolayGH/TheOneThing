@@ -142,7 +142,7 @@ public class TaskListActivity extends AppCompatActivity implements TaskListAdapt
                     downloadFromFirebase();
                     setupViewModel();
                 }else{
-                    Toast.makeText(this, "No Internet connection", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.no_internet_connection, Toast.LENGTH_LONG).show();
                 }
                 return true;
 
@@ -151,7 +151,7 @@ public class TaskListActivity extends AppCompatActivity implements TaskListAdapt
                     uploadToFirebase();
                     setupViewModel();
                 }else{
-                    Toast.makeText(this, "No Internet connection", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.no_internet_connection, Toast.LENGTH_LONG).show();
                 }
 
                 return true;
@@ -170,9 +170,9 @@ public class TaskListActivity extends AppCompatActivity implements TaskListAdapt
                             .setConstraints(Constraint.ON_ANY_NETWORK)
                             .build();
                     firebaseJobDispatcher.mustSchedule(job);
-                    Toast.makeText(this, "job run!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.job_run, Toast.LENGTH_LONG).show();
                 }else{
-                    Toast.makeText(this, "No Internet connection", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.no_internet_connection, Toast.LENGTH_LONG).show();
                 }
 
                 return true;
@@ -180,7 +180,7 @@ public class TaskListActivity extends AppCompatActivity implements TaskListAdapt
             case R.id.stop_job:
 
                 firebaseJobDispatcher.cancel(JOB_TAG);
-                Toast.makeText(this, "job canceled", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.job_canceled, Toast.LENGTH_LONG).show();
                 return true;
             default:
                     return super.onOptionsItemSelected(item);

@@ -73,5 +73,10 @@
     <string name="tasks_for_month">Tasks for Month</string>
     <string name="tasks_for_week">Tasks for Week</string>
     <string name="tasks_for_day">Tasks for Day</string>
+    <string name="no_active_tasksk">YOU HAVE NO ACTIVE TASKS!</string>
+    <string name="no_internet_connection">No Internet connection</string>
+    <string name="job_run">job run!</string>
+    <string name="job_canceled">job canceled</string>
+    <string name="auth_failed">Authentication failed.</string>
 
 </resources>
